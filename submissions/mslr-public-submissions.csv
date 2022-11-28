@@ -1,0 +1,19 @@
+Beaker experiment ID,Succeeded,Leaderboard entry,Submission name,Author,Type,Task
+01GCRZERDX9XKMDWQ5GDSPNXTA,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/ccfjibh5snk6ijmvf7b0,led-base-16384-cochrane,John Giorgi,model,Cochrane
+01GB67TFT0W87KF37E6D6GBRY0,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/cc2jthv3doq8eancqekg,Concatenate last sentence of each abstract,John Giorgi,baseline,Cochrane
+01GA1HEQEJHQHEAQD8YX8FWF5T,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/cbp794iek21haoh6brl0,SciSpace,Kartik Shinde,model,Cochrane
+01G9RKHTAQVPR038VTDCJB6Z8F,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/cbmu30ksc2g8nu8sdm7g,ittc2,Yulia Otmakhova,model,Cochrane
+01G9JE4STYHQ2136MCATAQ85CE,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/cblbhriek21haoh6brg0,bart-large-finetuned,Rahul Tangsali,model,Cochrane
+01G99JJWDSQNQDKMK5ZGRQD4RK,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/cbj2uu01jc49vlquuqsg,longt5_pubmed,Benjamin Yu,model,Cochrane
+01G8WPZRN2E3EHA2WENHVNCH8M,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/cbfpj4du8maminl2ood0,ittc1,Yulia Otmakhova,model,Cochrane
+01G4NJFD6GK3MA3RC67D5VR9DD,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/cad6gngk8ujcq3b5eim0,AI2/Longformer BART/train MS2/decode Cochrane,Jay DeYoung,baseline,Cochrane
+01G4NJ52SWWSKZQZFVHWJX1AJ6,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/cad6e35ubmmpegrcdp8g,AI2/Longformer BART/Train Cochrane/Decode Cochrane,Jay DeYoung,baseline,Cochrane
+01G4NE2DDS5G6Q047M97PX7SGV,✅,https://leaderboard.allenai.org/mslr-cochrane/submission/cad5ck8k8ujcq3b5eil0,AI2/BART/train Cochrane/decode Cochrane,Jay DeYoung,baseline,Cochrane
+01GCS40B7ADBBAYS620DEFD8HX,✅,https://leaderboard.allenai.org/mslr-ms2/submission/ccfknkbml1mljnftf7d0,led-base-16384-ms2,John Giorgi,model,MS2
+01GB5VXQHNPJ4YCH93HHMG3N0D,✅,https://leaderboard.allenai.org/mslr-ms2/submission/cc2gs2sqoh72v1qsq7c0,Copying the background section,John Giorgi,baseline,MS2
+01GAVY92TJXGXB8GVA8HW6E2CQ,✅,https://leaderboard.allenai.org/mslr-ms2/submission/cbvvhtsqoh72v1qsq74g,led-base-16384-ms2-old,John Giorgi,model,MS2
+01G9RKZ20KP0JJPMNGQSRDZ7K5,✅,https://leaderboard.allenai.org/mslr-ms2/submission/cbmu6d2ek21haoh6brig,longt5_pubmed,Benjamin Yu,model,MS2
+01G9JDPXPQFJKF98RW469EKG14,✅,https://leaderboard.allenai.org/mslr-ms2/submission/cblbe9ssc2g8nu8sdm40,bart-large-finetuned,Rahul Tangsali,model,MS2
+01G4NJM65PGX1ZQB32AXV0PMWV,✅,https://leaderboard.allenai.org/mslr-ms2/submission/cad6huok8ujcq3b5ein0,AI2/Longformer BART/train Cochrane/decode MS2,Jay DeYoung,baseline,MS2
+01G4NHX1Z0SSHJBD8T5B8ZAR37,✅,https://leaderboard.allenai.org/mslr-ms2/submission/cad6c15ubmmpegrcdp80,AI2/Longformer BART/train MS2/decode MS2,Jay DeYoung,baseline,MS2
+01G4NE57VTEC7884D13JWHTYYD,✅,https://leaderboard.allenai.org/mslr-ms2/submission/cad5dbtubmmpegrcdp7g,AI2/BART/train MS2/decode MS2,Jay DeYoung,baseline,MS2
