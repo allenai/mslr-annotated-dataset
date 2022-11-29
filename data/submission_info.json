@@ -1,0 +1,128 @@
+{
+ "SPNXTA": {
+  "exp_id": "01GCRZERDX9XKMDWQ5GDSPNXTA",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/ccfjibh5snk6ijmvf7b0",
+  "name": "led-base-16384-cochrane",
+  "type": "model",
+  "subtask": "Cochrane"
+ },
+ "6GBRY0": {
+  "exp_id": "01GB67TFT0W87KF37E6D6GBRY0",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/cc2jthv3doq8eancqekg",
+  "name": "Concatenate last sentence of each abstract",
+  "type": "baseline",
+  "subtask": "Cochrane"
+ },
+ "8FWF5T": {
+  "exp_id": "01GA1HEQEJHQHEAQD8YX8FWF5T",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/cbp794iek21haoh6brl0",
+  "name": "SciSpace",
+  "type": "model",
+  "subtask": "Cochrane"
+ },
+ "JB6Z8F": {
+  "exp_id": "01G9RKHTAQVPR038VTDCJB6Z8F",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/cbmu30ksc2g8nu8sdm7g",
+  "name": "ittc2",
+  "type": "model",
+  "subtask": "Cochrane"
+ },
+ "AQ85CE": {
+  "exp_id": "01G9JE4STYHQ2136MCATAQ85CE",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/cblbhriek21haoh6brg0",
+  "name": "bart-large-finetuned",
+  "type": "model",
+  "subtask": "Cochrane"
+ },
+ "RQD4RK": {
+  "exp_id": "01G99JJWDSQNQDKMK5ZGRQD4RK",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/cbj2uu01jc49vlquuqsg",
+  "name": "longt5_pubmed",
+  "type": "model",
+  "subtask": "Cochrane"
+ },
+ "VNCH8M": {
+  "exp_id": "01G8WPZRN2E3EHA2WENHVNCH8M",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/cbfpj4du8maminl2ood0",
+  "name": "ittc1",
+  "type": "model",
+  "subtask": "Cochrane"
+ },
+ "5VR9DD": {
+  "exp_id": "01G4NJFD6GK3MA3RC67D5VR9DD",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/cad6gngk8ujcq3b5eim0",
+  "name": "AI2/Longformer BART/train MS2/decode Cochrane",
+  "type": "baseline",
+  "subtask": "Cochrane"
+ },
+ "JX1AJ6": {
+  "exp_id": "01G4NJ52SWWSKZQZFVHWJX1AJ6",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/cad6e35ubmmpegrcdp8g",
+  "name": "AI2/Longformer BART/Train Cochrane/Decode Cochrane",
+  "type": "baseline",
+  "subtask": "Cochrane"
+ },
+ "PX7SGV": {
+  "exp_id": "01G4NE2DDS5G6Q047M97PX7SGV",
+  "url": "https://leaderboard.allenai.org/mslr-cochrane/submission/cad5ck8k8ujcq3b5eil0",
+  "name": "AI2/BART/train Cochrane/decode Cochrane",
+  "type": "baseline",
+  "subtask": "Cochrane"
+ },
+ "EFD8HX": {
+  "exp_id": "01GCS40B7ADBBAYS620DEFD8HX",
+  "url": "https://leaderboard.allenai.org/mslr-ms2/submission/ccfknkbml1mljnftf7d0",
+  "name": "led-base-16384-ms2",
+  "type": "model",
+  "subtask": "MS2"
+ },
+ "MG3N0D": {
+  "exp_id": "01GB5VXQHNPJ4YCH93HHMG3N0D",
+  "url": "https://leaderboard.allenai.org/mslr-ms2/submission/cc2gs2sqoh72v1qsq7c0",
+  "name": "Copying the background section",
+  "type": "baseline",
+  "subtask": "MS2"
+ },
+ "W6E2CQ": {
+  "exp_id": "01GAVY92TJXGXB8GVA8HW6E2CQ",
+  "url": "https://leaderboard.allenai.org/mslr-ms2/submission/cbvvhtsqoh72v1qsq74g",
+  "name": "led-base-16384-ms2-old",
+  "type": "model",
+  "subtask": "MS2"
+ },
+ "RDZ7K5": {
+  "exp_id": "01G9RKZ20KP0JJPMNGQSRDZ7K5",
+  "url": "https://leaderboard.allenai.org/mslr-ms2/submission/cbmu6d2ek21haoh6brig",
+  "name": "longt5_pubmed",
+  "type": "model",
+  "subtask": "MS2"
+ },
+ "9EKG14": {
+  "exp_id": "01G9JDPXPQFJKF98RW469EKG14",
+  "url": "https://leaderboard.allenai.org/mslr-ms2/submission/cblbe9ssc2g8nu8sdm40",
+  "name": "bart-large-finetuned",
+  "type": "model",
+  "subtask": "MS2"
+ },
+ "V0PMWV": {
+  "exp_id": "01G4NJM65PGX1ZQB32AXV0PMWV",
+  "url": "https://leaderboard.allenai.org/mslr-ms2/submission/cad6huok8ujcq3b5ein0",
+  "name": "AI2/Longformer BART/train Cochrane/decode MS2",
+  "type": "baseline",
+  "subtask": "MS2"
+ },
+ "8ZAR37": {
+  "exp_id": "01G4NHX1Z0SSHJBD8T5B8ZAR37",
+  "url": "https://leaderboard.allenai.org/mslr-ms2/submission/cad6c15ubmmpegrcdp80",
+  "name": "AI2/Longformer BART/train MS2/decode MS2",
+  "type": "baseline",
+  "subtask": "MS2"
+ },
+ "WHTYYD": {
+  "exp_id": "01G4NE57VTEC7884D13JWHTYYD",
+  "url": "https://leaderboard.allenai.org/mslr-ms2/submission/cad5dbtubmmpegrcdp7g",
+  "name": "AI2/BART/train MS2/decode MS2",
+  "type": "baseline",
+  "subtask": "MS2"
+ }
+}
