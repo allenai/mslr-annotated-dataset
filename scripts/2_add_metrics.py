@@ -14,10 +14,13 @@ from rouge_score import rouge_scorer
 from sentence_transformers import SentenceTransformer, util
 
 from ms2.models.evidence_inference_models import initialize_models
-from ms2.evaluation.utils import clean, entailment_scores
+from ms2.evaluation.utils import clean, entailment_score
 
 
 DATASET = 'Cochrane'
+# TODO: ei_divergence in current form only works with older library versions; 
+# nli/sts in current form only works with newer version of sentence-transformers 
+# pretty janky, should fix...
 METRICS_TO_COMPUTE = {
     'rouge',
     'bertscore',
@@ -78,24 +81,23 @@ def calculate_evidence_inference_divergence(
     # evidence inference scoring
     with open(ei_param_file, 'r') as inf:
         params = json.loads(inf.read())
-    _, evidence_inference_classifier, _, _, _, evidence_inference_tokenizer = initialize_models(params)
+    _, model, _, _, _, tokenizer = initialize_models(params)
     if ei_use_unconditional:
         classifier_file = os.path.join(ei_model_dir, 'unconditioned_evidence_classifier', 'unconditioned_evidence_classifier.pt')
     else:
         classifier_file = os.path.join(ei_model_dir, 'evidence_classifier', 'evidence_classifier.pt')
-    #evidence_inference_classifier.load_state_dict(torch.load(classifier_file))
+    #model.load_state_dict(torch.load(classifier_file))
     # pooler parameters are added by default in an older transformers, so we have to ignore that those are uninitialized.
-    evidence_inference_classifier.load_state_dict(torch.load(classifier_file, map_location=device), strict=False)
+    model.load_state_dict(torch.load(classifier_file, map_location=device), strict=False)
     if torch.cuda.is_available():
-        evidence_inference_classifier.cuda()
+        model.cuda()
+    
+    entail_scores = list(map(
+        lambda x: entailment_score(model, tokenizer, *x, ei_use_unconditional), 
+        zip(generated, targets, prefaces)
+    ))
 
-    entailment_results = entailment_scores(
-        evidence_inference_classifier, evidence_inference_tokenizer,
-        generated, targets, prefaces,
-        use_ios=ei_use_unconditional
-    )
-
-    return entailment_results
+    return {"ei_score": entail_scores}
 
 
 def calculate_sts(
@@ -152,7 +154,6 @@ if __name__ == '__main__':
         elif metric_name == 'bertscore':
             scores = calculate_bertscore(target_summaries, generated_summaries)
         elif metric_name == 'ei_divergence':
-            # TODO: fix
             scores = calculate_evidence_inference_divergence(target_summaries, generated_summaries, target_summaries)
         elif metric_name == 'nli':
             scores = calculate_sts('nli', target_summaries, generated_summaries, 'nli-roberta-base-v2')
@@ -177,14 +178,15 @@ if __name__ == '__main__':
     for entry in data:
         for pred in entry['predictions']:
             if pred.get('prediction'):
-                pred['scores'] = metric_list[index]
+                pred['scores'].update(metric_list[index])
                 index += 1
        
     # write to file         
     with open('data/processed_data_w_metrics.json', 'w') as outf:
         for entry in data:
+            for pred in entry['predictions']:
+                pred['scores'] = {k: float(v) for k, v in pred['scores'].items()}
             json.dump(entry, outf)
             outf.write('\n')
             
     print('done.')
-        
