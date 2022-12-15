@@ -10,7 +10,7 @@ Metadata about submissions are available in `submissions/mslr-public-submissions
 
 ### Main annotation
 
-From the Cochrane test split, we sampled 100 instances for 5 top-performing models and 1 baseline. Overlap occurs for 40(need to confirm) instances to assess IAA.
+From the Cochrane test split, we sampled 100 instances for 5 top-performing models and 1 baseline. Overlap occurs for 50 instances to assess IAA.
 
 The models annotated were:
 
