@@ -182,6 +182,6 @@ The dataset you should use is `data/processed_data_w_metrics.json`. Each line of
     'nli': 0.7216427326202393}}]}
 ```
 
-All model predictions are available under the `predictions` key. If annotations are available, they are under the `annotations` key associated with each prediction. Same for scores (which should be available for every prediction).
+All model predictions are available under the `predictions` key. If annotations are available, they are under the `annotations` key associated with each prediction. Same for scores (which should be available for every prediction). `exp_short` is the short form of the experiment name, and should be used as the model identifier (maps to IDs in the submissions file).
 
 TBD; some starter notebooks in `notebooks`
