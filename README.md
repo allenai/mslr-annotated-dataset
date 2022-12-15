@@ -117,7 +117,7 @@ The current metrics are:
 - sts (cosine similarity from SBERT); model: `stsb-roberta-base-v2`
 - claimver (cosine similarity from SBERT); model: `pritamdeka/S-PubMedBert-MS-MARCO-SCIFACT` (Note: this isn't the SciFact MultiVers model, that might be better...)
 
-## Analysis
+### Final dataset
 
 The dataset you should use is `data/processed_data_w_metrics.json`. Each line of this file is an entry like follows:
 
@@ -183,5 +183,7 @@ The dataset you should use is `data/processed_data_w_metrics.json`. Each line of
 ```
 
 All model predictions are available under the `predictions` key. If annotations are available, they are under the `annotations` key associated with each prediction. Same for scores (which should be available for every prediction). `exp_short` is the short form of the experiment name, and should be used as the model identifier (maps to IDs in the submissions file).
+
+## Analysis
 
 TBD; some starter notebooks in `notebooks`
