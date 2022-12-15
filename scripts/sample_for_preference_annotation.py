@@ -134,12 +134,15 @@ if __name__ == '__main__':
     random.shuffle(full_sample)
     
     target_per_annotator = 600
+    header_keys = ['review_id', 'target', 'exp1', 'exp1_generated', 'exp2', 'exp2_generated']
+    header_names = ['review_id', 'target', 'sys_a', 'A', 'sys_b', 'B']
     for i in range(8):
         print(f'Sampling for annot {i}')
         samp_to_file = random.sample(full_sample, target_per_annotator)
-        with open(os.path.join(OUTPUT_DIR, f'sample{i}.json'), 'w') as outf:
-            for entry in samp_to_file:
-                json.dump(entry, outf)
-                outf.write('\n')
+        with open(os.path.join(OUTPUT_DIR, f'sample{i}.csv'), 'w') as outf:
+            writer = csv.writer(outf, delimiter=',', quotechar='"')
+            writer.writerow(header_names)
+            for row in samp_to_file:
+                writer.writerow([row[k] for k in header_keys])
             
     print('done.')
