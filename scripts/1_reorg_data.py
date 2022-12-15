@@ -149,6 +149,7 @@ if __name__ == '__main__':
 
     print(all_annot_files)
 
+    # TODO: Current MS2 annotations are on the dev set while this loads the test set; there are no MS2 annotations in the resulting file
     annotations = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     for annot_id, subtask, annot_task, annot_file in all_annot_files:
         with open(annot_file, 'r') as f:
