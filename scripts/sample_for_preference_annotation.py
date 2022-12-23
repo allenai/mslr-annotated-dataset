@@ -35,6 +35,7 @@ if __name__ == '__main__':
             }
             predictions.append(entry)
             
+    # keep just the systems included in faceted annotation (5 models + 1 baseline on cochrane subtask)
     keep_systems = set([entry['exp_id'] for entry in predictions if entry['annotators']])
     predictions = [entry for entry in predictions if entry['exp_id'] in keep_systems]     
                 
@@ -89,17 +90,14 @@ if __name__ == '__main__':
 
     # stratified sampling
     full_sample = []
-    target_n = 40
+    target_n = 30
     for e1, e2, annot_true in pair_annotation.keys():
         matches = [
             pair for pair in pop_to_sample 
             if pair['exp_pair'] == [e1, e2]
             and pair['both_annotated'] == annot_true
         ] 
-        print(e1, e2, len(matches))
-        if target_n > len(matches):
-            print('\t undersampling!')
-        samp = random.sample(matches, target_n)
+        samp = random.sample(matches, min(target_n, len(matches)))
         for s in samp:
             coin_toss = random.randint(0, 1)
             if coin_toss == 0:
@@ -132,17 +130,38 @@ if __name__ == '__main__':
 
     # randomly shuffle and write to file
     random.shuffle(full_sample)
+    num_annotators = 8
     
-    target_per_annotator = 600
+    target_per_annotator = 200
     header_keys = ['review_id', 'target', 'exp1', 'exp1_generated', 'exp2', 'exp2_generated']
     header_names = ['review_id', 'target', 'sys_a', 'A', 'sys_b', 'B']
-    for i in range(8):
+    samp_distros = []
+    for i in range(num_annotators):
         print(f'Sampling for annot {i}')
         samp_to_file = random.sample(full_sample, target_per_annotator)
+        samp_distro_annot = Counter([inst['both_annotated'] for inst in samp_to_file])
+        samp_pair_annot = Counter([f"{'_'.join(sorted([inst['exp1'], inst['exp2']]))}" for inst in samp_to_file])
+        samp_distros.append([samp_distro_annot, samp_pair_annot])
         with open(os.path.join(OUTPUT_DIR, f'sample{i}.csv'), 'w') as outf:
             writer = csv.writer(outf, delimiter=',', quotechar='"')
             writer.writerow(header_names)
             for row in samp_to_file:
                 writer.writerow([row[k] for k in header_keys])
-            
+    print()
+    
+    distro_annots = [d[0] for d in samp_distros]
+    keys = distro_annots[0].keys()
+    print('key' + '\t' + '\t'.join([str(i) for i in range(num_annotators)]))
+    print('-'*70)
+    for k in keys:
+        print(str(k) + '\t' + '\t'.join([str(d[k]) for d in distro_annots]))
+    print()
+    
+    pair_annots = [d[1] for d in samp_distros]
+    keys = pair_annots[0].keys()
+    print('key' + '\t\t' + '\t'.join([str(i) for i in range(num_annotators)]))
+    print('-'*80)
+    for k in keys:
+        print(str(k) + '\t' + '\t'.join([str(p[k]) for p in pair_annots]))
+    
     print('done.')
