@@ -216,6 +216,8 @@ The metrics computed for each summary are:
 
 Analysis included in the published manuscript are in `notebooks/mslr_annotation_analysis.ipynb`
 
+To set up an environment, please follow the instructions provided [here](https://github.com/allenai/mslr-shared-task).
+
 ## Citation
 
 If using this work, please cite:
