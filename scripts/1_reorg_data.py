@@ -3,7 +3,8 @@ import csv
 import json
 from collections import defaultdict
 
-
+# to create the dataset, submissions and targets must be downloaded from the leaderboard and placed
+# into the following directories. this requires beaker access
 SUBMISSIONS_DIR = 'submissions/'
 TARGET_DIR = 'submissions/targets/'
 ANNOTATION_DATA_DIR = 'data/Annotations/'
