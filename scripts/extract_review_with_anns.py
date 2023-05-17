@@ -1,3 +1,7 @@
+"""
+Keep only reviews with annotations
+"""
+
 import json
 import pandas as pd
 import copy
