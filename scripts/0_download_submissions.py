@@ -1,3 +1,8 @@
+"""
+This script downloads all public submissions to the MSLR leaderboards 
+It requires Beaker access for the specific task
+"""
+
 import os
 import csv
 import subprocess
