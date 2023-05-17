@@ -2,7 +2,7 @@ import pandas as pd
 from rapidfuzz import fuzz
 
 
-data = pd.read_json('../data/processed_data_w_metrics_w_anns_pico.json', lines = True)
+data = pd.read_json('../data/processed_data_w_metrics_pico.json', lines = True)
 
 mapping = {'PAR': 'population', 'INT': 'intervention', 'OUT': 'outcome'}
 
@@ -76,7 +76,7 @@ def calculate_overlap_corpus(corpus, strategy):
     df.to_json('data_with_overlap_scores.json', orient = 'records', lines = True)
 
 if __name__ == "__main__":
-    corpus = pd.read_json('processed_data_w_metrics_w_anns_pico.json', lines = True)
+    corpus = pd.read_json('processed_data_w_metrics_pico.json', lines = True)
     strategy = 'exact_match'
     calculate_overlap_corpus(corpus, strategy)
     strategy = 'close_match'
