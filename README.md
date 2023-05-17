@@ -1,4 +1,4 @@
-# MSLR human-annotated dataset for metric evaluations
+# MSLR annotated dataset for metric evaluations
 
 This repo contains the dataset and analysis code for the ACL 2023 paper "Automated Metrics for Medical Multi-Document Summarization Disagree with Human Evaluations." As a follow up to the [MSLR shared task](https://github.com/allenai/mslr-shared-task) on multi-document summarization for literature review, we sampled six submissions to the MSLR-Cochrane subtask, and provide human judgments of summary quality for the submitted summaries. Two types of human judgments are provided, facet-based quality annotations, as well as pairwise judgments.
 
@@ -10,7 +10,7 @@ Metadata about submissions are available in `submissions/mslr-public-submissions
 
 ## Data
 
-*TL;DR* The final dataset is `data/data_with_overlap_scores.json`
+***TL;DR* The final dataset is `data/data_with_overlap_scores.json`**
 
 An example entry looks like the following:
 
@@ -204,13 +204,13 @@ ANNOT_KEYS = {
 
 The metrics computed for each summary are:
 
-- rouge (R1, R2, RL, RLsum and P, R, F associated with each)
-- bertscore (P, R, F)
-- delta-ei
-- nli (cosine similarity from SBERT); model: `nli-roberta-base-v2`
-- sts (cosine similarity from SBERT); model: `stsb-roberta-base-v2`
-- claimver (cosine similarity from SBERT); model: `pritamdeka/S-PubMedBert-MS-MARCO-SCIFACT`
-- pio-overlap (exact match, close match, substring)
+- ROUGE (R1, R2, RL, RLsum and P, R, F associated with each)
+- BERTScore (P, R, F)
+- Delta-EI
+- NLI (cosine similarity from SBERT); model: `nli-roberta-base-v2`
+- STS (cosine similarity from SBERT); model: `stsb-roberta-base-v2`
+- ClaimVer (cosine similarity from SBERT); model: `pritamdeka/S-PubMedBert-MS-MARCO-SCIFACT`
+- PIO-Overlap (exact match, close match, substring)
 
 ## Analysis
 
