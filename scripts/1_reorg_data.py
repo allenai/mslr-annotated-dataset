@@ -15,7 +15,7 @@ ANNOTATION_FILE_TEMPLATE = 'Data for MSLR Annotation - Cochrane Subtask - {}.tsv
 PILOT_ANNOT_FILE_TEMPLATE = 'Data for MSLR Annotation - 100 instances - {}.tsv'
 
 SUBTASKS = {'Cochrane', 'MS2'}
-ANNOTATORS = {0: 'Bailey', 1: 'Erin', 2: 'Madeleine'}
+ANNOTATORS = {0: 'A1', 1: 'A2', 2: 'A0'}
 ANNOT_KEYS = {
     'fluency': 'Is the generated summary fluent?',
     'population': 'Is the *population* in the generated summary the same as the population in the target summary?',
