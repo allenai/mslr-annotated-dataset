@@ -202,16 +202,6 @@ ANNOT_KEYS = {
 }
 ```
 
-The metrics computed for each summary are:
-
-- ROUGE (R1, R2, RL, RLsum and P, R, F associated with each)
-- BERTScore (P, R, F)
-- Delta-EI
-- NLI (cosine similarity from SBERT); model: `nli-roberta-base-v2`
-- STS (cosine similarity from SBERT); model: `stsb-roberta-base-v2`
-- ClaimVer (cosine similarity from SBERT); model: `pritamdeka/S-PubMedBert-MS-MARCO-SCIFACT`
-- PIO-Overlap (exact match, close match, substring)
-
 ## Analysis
 
 Analysis included in the published manuscript are in `notebooks/mslr_annotation_analysis.ipynb`
